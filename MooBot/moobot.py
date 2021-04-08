@@ -4,6 +4,7 @@ from moodle_scrapper import *
 from bs4 import BeautifulSoup
 from requests import session
 import requests
+from datetime import datetime
 
 import discord
 import asyncio
@@ -35,6 +36,11 @@ class MyClient(discord.Client):
 
           count+=1
           print("Count :",count)
+
+          # dd/mm/YY H:M:S
+          now = datetime.now()
+          dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+          print("date and time =", dt_string)
 
           '''
           FORUMS
@@ -97,6 +103,11 @@ if __name__ == "__main__":
   print("getting Courses...\n")
   course_dict = getCourses(session)
   print(course_dict)
+
+  write_old_forum_posts(course_dict,session)
+  write_old_activities(course_dict,session)
+
+  print("OLD FORUM AND ACTIVITIES UPDATED")
 
   client = MyClient()
   client.run(os.getenv('TOKEN'))
