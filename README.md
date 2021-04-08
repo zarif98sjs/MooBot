@@ -29,7 +29,7 @@ The easiest way to deploy `MooBot` is using [repl.it](https://replit.com) . Crea
 
 ![](images/always_on.png)
 
-Also make sure you repl is private so that any personal information is not breached .
+Also make sure your repl is private so that no personal information is breached .
 
 Alternatively you can also create a server . This [link](https://www.codementor.io/@garethdwyer/building-a-discord-bot-with-python-and-repl-it-miblcwejz#keeping-our-bot-alive) explains the steps.
   
