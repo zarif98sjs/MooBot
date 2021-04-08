@@ -22,4 +22,14 @@ Currently `MooBot` serves the CSE17 Discord server . The bot code and scrapper c
 
 - bot id
 - channel id
+
+# Deploy
+
+The easiest way to deploy `MooBot` is using [repl.it](https://replit.com) . Create a repl and clone the repo . Run [moobot.py](MooBot/moobot.py) , and you are done ! To make sure your server is up and running , use the **always on** feature available in repl.it student account .
+
+![](images/always_on.png)
+
+Also make sure you repl is private so that any personal information is not breached .
+
+Alternatively you can also create a server . This [link](https://www.codementor.io/@garethdwyer/building-a-discord-bot-with-python-and-repl-it-miblcwejz#keeping-our-bot-alive) explains the steps.
   
