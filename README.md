@@ -8,15 +8,21 @@ Introducing `MooBot` , here to easen your panic attacks .
 MooBot is a notification bot for our Moodle . It sends 2 kinds of notification :
 - `Forum Post`
   - Any time a teacher posts something in the forum
-    - Discord <br />![](images/forum_post.png)
-    - Facebook <br />![](images/forum_post_fb.JPG)
+    - Discord
+   
+      ![](images/forum_post.png)
+    - Facebook
+    
+      ![](images/forum_post_fb.JPG)
 
 - `New Activity` 
   - Any time Resource / Assignment / Submission Link is uploaded in the course section
-    - Discord <br />![](images/activity.png)
-    - Facebook  <br />![](images/activity_fb.JPG)
-
-
+    - Discord 
+      
+      ![](images/activity.png)
+    - Facebook  
+    
+      ![](images/activity_fb.JPG)
 
 # Usage
 
