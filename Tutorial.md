@@ -72,8 +72,8 @@ So after that you should have the following data
 ```python
 STUDENT_ID = "1805xyz"
 LOGIN_PASSWORD = "password"
-CHANNEL_ID = 825139612806237565
-GROUP_ID = 496455517759364
+CHANNEL_ID = YOUR_CHANNEL_ID
+GROUP_ID = YOUR_GROUP_ID
 ```
 
 ### Final touch
