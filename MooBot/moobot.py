@@ -6,13 +6,15 @@ from requests import session
 import requests
 from datetime import datetime
 
+from facebook import GraphAPI
 import discord
 import asyncio
 import os
 
 STUDENT_ID = "YOUR_STUDENT_ID"
 LOGIN_PASSWORD = "YOUR_LOGIN_PASSWORD"
-CHANNEL_ID = "YOUR_CHANNEL_ID"
+CHANNEL_ID = "YOUR_DISCORD_CHANNEL_ID"
+GROUP_ID = "YOUR_FACEBOOK_GROUP_ID"
 
 class MyClient(discord.Client):
     def __init__(self, *args, **kwargs):
@@ -29,7 +31,7 @@ class MyClient(discord.Client):
     async def my_background_task(self):
         await self.wait_until_ready()
         channel = self.get_channel(CHANNEL_ID) # channel ID goes here
-
+        graph = GraphAPI(access_token=os.getenv('FB_TOKEN'))
         count = 0
 
         while not self.is_closed():
@@ -72,6 +74,11 @@ class MyClient(discord.Client):
 
             for p in post_ara:
               print(p)
+              # FACEBOOK GROUP NOTIFICATION
+              message = "Auto Generated Post.\n Forum Post ( " + c_name + " )\nLink : " + p.link + " \nTeacher: " + p.author + "\nThank You"
+              graph.put_object(GROUP_ID, 'feed', message=message)
+
+              # DISCORD CHANNEL NOTIFICATION
               embedVar = discord.Embed(title="Forum Post ( " +c_name+" ) :rotating_light: ", description=p.title, color=0xb331bd)
               embedVar.add_field(name="Link :paperclips: ", value=p.link, inline=False)
               embedVar.add_field(name="Teacher :person_fencing: ", value="`"+p.author+"`", inline=False)
@@ -85,6 +92,11 @@ class MyClient(discord.Client):
 
             for p in post_ara:
               print(p)
+              # FACEBOOK GROUP NOTIFICATION
+              message = "Auto Generated Post.\n Forum Post ( " + c_name + " )\nLink : " + p.link + " \nTeacher: " + p.author + "\nThank You"
+              graph.put_object(GROUP_ID , 'feed', message=message)
+
+              # DISCORD CHANNEL NOTIFICATION
               embedVar = discord.Embed(title="New Activity ( " + c_name +  " ) :boom: ", description=p.title, color=0xfc9803)
               embedVar.add_field(name="Link :paperclips: ", value=p.link, inline=False)
               await channel.send(embed=embedVar)
