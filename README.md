@@ -8,20 +8,27 @@ Introducing `MooBot` , here to easen your panic attacks .
 MooBot is a notification bot for our Moodle . It sends 2 kinds of notification :
 - `Forum Post`
   - Any time a teacher posts something in the forum
-    
-    ![](images/forum_post.png)
+    - Discord <br />![](images/forum_post.png)
+    - Facebook <br />![](images/forum_post_fb.JPG)
 
 - `New Activity` 
   - Any time Resource / Assignment / Submission Link is uploaded in the course section
+    - Discord <br />![](images/activity.png)
+    - Facebook  <br />![](images/activity_fb.JPG)
 
-    ![](images/activity.png)
+
 
 # Usage
 
-Currently `MooBot` serves the CSE17 Discord server . The bot code and scrapper code is available [here](MooBot/) . You can make your own custom one or one for your batch by changing the 
+Currently `MooBot` serves the CSE17 and CSE18 Discord server . The bot code and scrapper code is available [here](MooBot/) . You can make your own custom one or one for your batch by changing the 
 
 - bot id
 - channel id
+- group id
+- moodle login information
+
+A detailed step by step tutorial is available [here](Tutorial.md)
+
 
 # Deploy
 
@@ -32,4 +39,5 @@ The easiest way to deploy `MooBot` is using [repl.it](https://replit.com) . Crea
 Also make sure your repl is private so that no personal information is breached .
 
 Alternatively you can also create a server . This [link](https://www.codementor.io/@garethdwyer/building-a-discord-bot-with-python-and-repl-it-miblcwejz#keeping-our-bot-alive) explains the steps.
-  
+
+ 
