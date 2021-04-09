@@ -13,12 +13,10 @@ import os
 
 STUDENT_ID = "YOUR_STUDENT_ID"
 LOGIN_PASSWORD = "YOUR_LOGIN_PASSWORD"
-<<<<<<< HEAD
-CHANNEL_ID = "YOUR_DISCORD_CHANNEL_ID"
-GROUP_ID = "YOUR_FACEBOOK_GROUP_ID"
-=======
+
+
 CHANNEL_ID = YOUR_CHANNEL_ID # don't use double quote
->>>>>>> b66dabd58597a2a88cca83743360b575c276a701
+GROUP_ID = "YOUR_FACEBOOK_GROUP_ID"
 
 class MyClient(discord.Client):
     def __init__(self, *args, **kwargs):
